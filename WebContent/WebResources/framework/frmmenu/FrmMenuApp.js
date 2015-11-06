@@ -69,6 +69,12 @@ FrmMainApp.config(['$routeProvider',
   	      },
   	      controller: 'GeneracionCierreCarteraController'
   	    }). 
+  	  when('/Procedimiento/:soporteId', {
+  	      templateUrl: function(params) {
+  	    	return  WEB_SERVER+'Facturacion/Procedimiento/';
+  	      },
+  	      controller: 'ProcedimientoController'
+  	    }).  
    	    otherwise({
    	    	templateUrl: function(params) {
     	          return  WEB_SERVER+'FrmMenu/defaultView'; 
