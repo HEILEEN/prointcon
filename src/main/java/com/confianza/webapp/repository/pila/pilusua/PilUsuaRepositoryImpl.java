@@ -239,4 +239,27 @@ public class PilUsuaRepositoryImpl implements PilUsuaRepository{
 		}
 	}
 	
+	/**
+	 * Metodo de consulta para los registros de la tabla PilUsua por nit
+	 * @value id = id de la llave primaria a consultar el registro
+	 * @return PilUsua = objeto de la case PilUsua que contiene los datos encontrados dado el id
+	 * @throws Exception
+	 */
+	@Override
+	@Transactional
+	public PilUsua listByNit(String nit){
+		try{
+			String sql = "select "+PilUsua.getColumnNames()
+					   + "from PIL_USUA "
+					   + "where usuaunit = :nit ";
+						
+			Query query = getSession().createSQLQuery(sql)
+						 .addEntity(PilUsua.class)					
+					     .setParameter("nit", nit);
+			return (PilUsua)query.uniqueResult();
+		}catch(Exception e){
+			e.printStackTrace();
+			return null;
+		}
+	}
 }

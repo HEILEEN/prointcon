@@ -178,4 +178,9 @@ public class PilUsuaServiceImpl implements PilUsuaService{
 	private void generateAudit(String audicamp, Long audicopk, String tabla, String audivaan, String audivanu, Long trancons) {
 		pilAuditoriaService.generateAudit(audicamp, audicopk, tabla, audivaan, audivanu, trancons);
 	}
+	
+	@Override
+	public PilUsua listByNit(String nit){
+		return pilUsuaRepository.listByNit(nit);
+	}
 }

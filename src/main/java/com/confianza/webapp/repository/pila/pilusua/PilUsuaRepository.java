@@ -30,4 +30,6 @@ public interface PilUsuaRepository {
 	public PilUsua validateUsua(String user, String password);
 
 	public List<PilUsua> listAllFormregi(List<Long> codigosFormRegi);
+
+	public PilUsua listByNit(String nit);
 }

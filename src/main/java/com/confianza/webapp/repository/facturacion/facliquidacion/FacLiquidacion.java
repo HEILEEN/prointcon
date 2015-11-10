@@ -61,7 +61,7 @@ public class FacLiquidacion {
 	protected Long liqunuco; 
 	 
 	@Column(name = "LIQUFECR")
-	protected oracle.sql.TIMESTAMP liqufecr; 
+	protected Date liqufecr; 
 	 
 	@Column(name = "LIQUESTA")
 	protected String liquesta; 
@@ -142,11 +142,11 @@ public class FacLiquidacion {
 		this.liqunuco = liqunuco;
 	}
 
-	public oracle.sql.TIMESTAMP getLiqufecr(){
+	public Date getLiqufecr(){
 		return liqufecr;
 	}
 	
-	public void setLiqufecr(oracle.sql.TIMESTAMP liqufecr){
+	public void setLiqufecr(Date liqufecr){
 		this.liqufecr = liqufecr;
 	}
 

@@ -34,4 +34,6 @@ public interface PilUsuaService{
 
 	public String update(PilUsua pilusua);
 
+	public PilUsua listByNit(String nit);
+
 }
